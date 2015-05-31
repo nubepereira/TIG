@@ -117,7 +117,7 @@
         
                     <Items>
                         <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Seleccion/Seleciones.aspx" Text="Selecciones" Value="s" Selected="false"></asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Mercado/Mercados.aspx" Text="Mercados" Value="m" Selected="true"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Mercado/Mercados.aspx" Text="Mercados" Value="m" Selected="false"></asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Producto/Productos.aspx" Text="Productos" Value="p" Selected="false"></asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Representante/Gerentes.aspx" Text="Gerentes" Value="g"></asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Representante/Representantes.aspx" Text="Representantes" Value="r"></asp:MenuItem>

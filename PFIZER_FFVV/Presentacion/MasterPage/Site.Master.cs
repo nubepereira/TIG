@@ -60,7 +60,7 @@ namespace PFIZER_FFVV.Presentacion.MasterPage
 
         protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
         {
-
+            
         }
 
         protected void Menu1_MenuItemDataBound(object sender, MenuEventArgs e)
@@ -85,7 +85,6 @@ namespace PFIZER_FFVV.Presentacion.MasterPage
             Session["SesionUsuarioMercado"] = null;
             Response.Redirect("~/Presentacion/Vista/Seleccion/Modulos.aspx");
         }
-
        
     }
 }

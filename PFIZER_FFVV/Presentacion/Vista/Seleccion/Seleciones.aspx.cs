@@ -17,6 +17,7 @@ using System.Configuration;
 using PFIZER_FFVV.AccesoDeDatos.Conexion.InterfazConexion;
 using PFIZER_FFVV.LogicaDeNegocios.Clases.LNUsuarios;
 using PFIZER_FFVV.Entidades.EUsuarios;
+using PFIZER_FFVV.Presentacion.MasterPage;
 using System.Windows.Forms;
 
 
