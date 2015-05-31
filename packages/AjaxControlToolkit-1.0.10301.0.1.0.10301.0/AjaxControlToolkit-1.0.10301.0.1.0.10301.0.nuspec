@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>AjaxControlToolkit-1.0.10301.0</id>
+    <version>1.0.10301.0</version>
+    <title>AjaxControlToolkit-1.0.10301.0</title>
+    <authors>alin</authors>
+    <owners>alin</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Legacy version of AjaxControlToolkit which is not published on its official NuGet package page http://nuget.org/packages/AjaxControlToolkit</description>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <tags>deprecated ASP.NET AJAX</tags>
+  </metadata>
+</package>

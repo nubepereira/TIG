@@ -1,0 +1,1057 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{972F600E-D648-45C1-A693-C6006D326918}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PFIZER_FFVV</RootNamespace>
+    <AssemblyName>PFIZER_FFVV</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ajax-data-table">
+      <HintPath>..\packages\ajax-data-table.1.0.6.1\lib\net\ajax-data-table.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit, Version=1.0.10301.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AjaxControlToolkit.7.1213\lib\45\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin, Version=5.7.5124.21494, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AjaxMin.5.7.5124.21499\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.5.6\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Services.5.0.0\lib\net40\Microsoft.Data.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.0.0\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching">
+      <HintPath>..\packages\EnterpriseLibrary.Caching.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling">
+      <HintPath>..\packages\EnterpriseLibrary.ExceptionHandling.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging">
+      <HintPath>..\packages\EnterpriseLibrary.ExceptionHandling.Logging.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.WebForms.10.0.40219.1\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage">
+      <HintPath>..\packages\WindowsAzure.Storage.2.1.0.4\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.DomainServices.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.DomainServices.Server, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Entity.Design" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.2\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Windows.Input.Manipulations" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Web.Optimization">
+      <HintPath>..\packages\Web.Optimization.0.0.8\lib\net40\Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Web.Optimization.Bundles.AjaxMin">
+      <HintPath>..\packages\Web.Optimization.Bundles.AjaxMin.0.0.8\lib\net40\Web.Optimization.Bundles.AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\ajax-data-table.dll" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\AjaxMin.dll" />
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\ar\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\cs\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\de\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\de\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\de\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\de\System.Spatial.resources.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\es\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\es\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\es\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\es\Microsoft.QualityTools.Testing.Fakes.resources.dll" />
+    <Content Include="bin\es\System.Spatial.resources.dll" />
+    <Content Include="bin\fr\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\fr\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\fr\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\fr\System.Spatial.resources.dll" />
+    <Content Include="bin\he\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\hi\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\HtmlAgilityPack.dll" />
+    <Content Include="bin\HtmlAgilityPack.pdb" />
+    <Content Include="bin\HtmlAgilityPack.xml" />
+    <Content Include="bin\it\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\it\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\it\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\it\System.Spatial.resources.dll" />
+    <Content Include="bin\ja\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\ja\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\ja\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\ja\System.Spatial.resources.dll" />
+    <Content Include="bin\ko\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\ko\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\ko\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\ko\System.Spatial.resources.dll" />
+    <Content Include="bin\Microsoft.Data.Edm.dll" />
+    <Content Include="bin\Microsoft.Data.Edm.xml" />
+    <Content Include="bin\Microsoft.Data.OData.dll" />
+    <Content Include="bin\Microsoft.Data.OData.xml" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Caching.xml" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Common.xml" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Data.xml" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.xml" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.xml" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Logging.xml" />
+    <Content Include="bin\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.Interception.Configuration.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="bin\Microsoft.QualityTools.Testing.Fakes.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.Common.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.DataVisualization.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.ProcessingObjectModel.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.WebForms.dll" />
+    <Content Include="bin\Microsoft.ScriptManager.MSAjax.dll" />
+    <Content Include="bin\Microsoft.ScriptManager.WebForms.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Microsoft.WindowsAzure.Configuration.dll" />
+    <Content Include="bin\Microsoft.WindowsAzure.Storage.dll" />
+    <Content Include="bin\Microsoft.WindowsAzure.Storage.xml" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\nl\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\pl\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\pt\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\ru\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\ru\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\ru\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\ru\System.Spatial.resources.dll" />
+    <Content Include="bin\System.Spatial.dll" />
+    <Content Include="bin\System.Spatial.xml" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\tr-TR\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\Web.Optimization.Bundles.AjaxMin.dll" />
+    <Content Include="bin\Web.Optimization.dll" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="bin\zh-CHS\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\zh-CHT\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\zh-Hans\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\zh-Hans\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\zh-Hans\System.Spatial.resources.dll" />
+    <Content Include="bin\zh-Hant\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\zh-Hant\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\zh-Hant\System.Spatial.resources.dll" />
+    <Content Include="FakesAssemblies\AjaxMin.4.97.4951.28478.Fakes.fakesconfig" />
+    <Content Include="FakesAssemblies\AjaxMin.4.97.4951.28478.Fakes.messages" />
+    <None Include="Presentacion\Estilo\Scripts\jquery-2.1.0.intellisense.js" />
+    <Content Include="bin\PFIZER_FFVV.dll" />
+    <Content Include="bin\PFIZER_FFVV.pdb" />
+    <Content Include="Content\ajax-data-table-icons.png" />
+    <Content Include="Content\ajax-data-table.css" />
+    <Content Include="FakesAssemblies\AjaxMin.4.97.4951.28478.Fakes.dll" />
+    <Content Include="FakesAssemblies\AjaxMin.4.97.4951.28478.Fakes.xml" />
+    <Content Include="Presentacion\Estilo\Scripts\Default.js" />
+    <Content Include="Presentacion\Estilo\Scripts\jquery-2.1.0.js" />
+    <Content Include="Presentacion\Estilo\Scripts\jquery-2.1.0.min.js" />
+    <Content Include="Presentacion\Estilo\style.css" />
+    <Content Include="Presentacion\Imagenes\ajax-loader.gif" />
+    <Content Include="Presentacion\Imagenes\bg.gif" />
+    <Content Include="Presentacion\Imagenes\bgshade.gif" />
+    <Content Include="Presentacion\Imagenes\bigimage.gif" />
+    <Content Include="Presentacion\Imagenes\bullet.gif" />
+    <Content Include="Presentacion\Imagenes\comment.gif" />
+    <Content Include="Presentacion\Imagenes\corner.gif" />
+    <Content Include="Presentacion\Imagenes\FaviconPfizer.png" />
+    <Content Include="Presentacion\Imagenes\FaviconRemoto.png" />
+    <Content Include="Presentacion\Imagenes\FaviconRemoto1.png" />
+    <Content Include="Presentacion\Imagenes\graficoBarras.png" />
+    <Content Include="Presentacion\Imagenes\graficoLinea.png" />
+    <Content Include="Presentacion\Imagenes\graficoTablas.png" />
+    <Content Include="Presentacion\Imagenes\graficoTorta.png" />
+    <Content Include="Presentacion\Imagenes\image.gif" />
+    <Content Include="Presentacion\Imagenes\lb.gif" />
+    <Content Include="Presentacion\Imagenes\lbhover.gif" />
+    <Content Include="Presentacion\Imagenes\logoRemoto.png" />
+    <Content Include="Presentacion\Imagenes\lupa.gif" />
+    <Content Include="Presentacion\Imagenes\minus.gif" />
+    <Content Include="Presentacion\Imagenes\news.gif" />
+    <Content Include="Presentacion\Imagenes\notes.gif" />
+    <Content Include="Presentacion\Imagenes\pfizerLogo.png" />
+    <Content Include="Presentacion\Imagenes\plus.gif" />
+    <Content Include="Presentacion\Imagenes\porcentaje.png" />
+    <Content Include="Presentacion\Imagenes\searchbg.gif" />
+    <Content Include="Presentacion\Imagenes\topicsbg.gif" />
+    <Content Include="Presentacion\StoreProcedure\UsuarioProcedure.sql" />
+    <Content Include="Presentacion\Vista\Brick\Bricks.aspx" />
+    <Content Include="Presentacion\Vista\Brick\BricksVal.aspx" />
+    <Content Include="Presentacion\Vista\Brick\UnidadesCrecimientoXBrickMercadoProducto.aspx" />
+    <Content Include="Presentacion\Vista\Brick\UnidadesEnElMercado.aspx" />
+    <Content Include="Presentacion\Vista\Brick\UnidadesEnElMercadoXProducto.aspx" />
+    <Content Include="Presentacion\Vista\Brick\UnidadesIEXBrickMercado.aspx" />
+    <Content Include="Presentacion\Vista\Brick\UnidadesMSXBrickMercado.aspx" />
+    <Content Include="Presentacion\Vista\Brick\UnidadesMSXTrimBrickMercadoProducto.aspx" />
+    <Content Include="Presentacion\Vista\Brick\UnidadesXBrickEnElMercadoXProducto.aspx" />
+    <Content Include="Presentacion\Vista\Brick\ValoresCrecimientoXBrickMercadoProducto.aspx" />
+    <Content Include="Presentacion\Vista\Brick\ValoresEnElMercado.aspx" />
+    <Content Include="Presentacion\Vista\Brick\ValoresEnElMercadoXProducto.aspx" />
+    <Content Include="Presentacion\Vista\Brick\ValoresIEXBrickMercado.aspx" />
+    <Content Include="Presentacion\Vista\Brick\ValoresMSXBrickMercado.aspx" />
+    <Content Include="Presentacion\Vista\Brick\ValoresMSXTrimBrickMercadoProducto.aspx" />
+    <Content Include="Presentacion\Vista\Brick\ValoresXBrickEnElMercadoXProducto.aspx" />
+    <Content Include="Presentacion\Vista\Competidor\Competidores.aspx" />
+    <Content Include="Presentacion\Vista\Competidor\CompetidoresVal.aspx" />
+    <Content Include="Presentacion\Vista\Competidor\UnidadesCompetidorCrecimientoTerritorioClaseXMercado.aspx" />
+    <Content Include="Presentacion\Vista\Competidor\UnidadesCompetidoresBrickClaseXMercado.aspx" />
+    <Content Include="Presentacion\Vista\Competidor\UnidadesCompetidoresRegionClaseXMercado.aspx" />
+    <Content Include="Presentacion\Vista\Competidor\UnidadesCompetidorIExTerritorioClaseXMercado.aspx" />
+    <Content Include="Presentacion\Vista\Competidor\UnidadesCompetidorMSxTerritorioClaseXMercado.aspx" />
+    <Content Include="Presentacion\Vista\Competidor\UnidadesCompetidorResumenXProductoXMercado.aspx" />
+    <Content Include="Presentacion\Vista\Competidor\UnidadesCompetidorTerritorioClaseXMercado.aspx" />
+    <Content Include="Presentacion\Vista\Competidor\ValoresCompetidorCrecimientoTerritorioClaseXMercado.aspx" />
+    <Content Include="Presentacion\Vista\Competidor\ValoresCompetidoresBrickClaseXMercado.aspx" />
+    <Content Include="Presentacion\Vista\Competidor\ValoresCompetidoresRegionClaseXMercado.aspx" />
+    <Content Include="Presentacion\Vista\Competidor\ValoresCompetidorIExTerritorioClaseXMercado.aspx" />
+    <Content Include="Presentacion\Vista\Competidor\ValoresCompetidorMSxTerritorioClaseXMercado.aspx" />
+    <Content Include="Presentacion\Vista\Competidor\ValoresCompetidorResumenXProductoXMercado.aspx" />
+    <Content Include="Presentacion\Vista\Competidor\ValoresCompetidorTerritorioClaseXMercado.aspx" />
+    <Content Include="Presentacion\Vista\Email\EnvioEmail.aspx" />
+    <Content Include="Presentacion\Vista\Login\Login.aspx">
+      <BrowseToURL>~/Presentacion/Vista/Login/Login.aspx</BrowseToURL>
+    </Content>
+    <Content Include="Presentacion\Vista\Mercado\MercadosVal.aspx" />
+    <Content Include="Presentacion\Vista\Mercado\PruebaDetalleUnidadesMarketShare.aspx" />
+    <Content Include="Presentacion\Vista\Mercado\PruebaDetalleUnidadesMercado.aspx" />
+    <Content Include="Presentacion\Vista\Mercado\Mercados.aspx" />
+    <Content Include="Presentacion\Vista\Mercado\PruebaGridAnidados.aspx" />
+    <Content Include="Presentacion\Vista\Mercado\PruebaUnidadesMarketShare.aspx" />
+    <Content Include="Presentacion\Vista\Mercado\PruebaUnidadesMercado.aspx" />
+    <Content Include="Presentacion\Vista\Mercado\UnidadesMSMercado.aspx" />
+    <Content Include="Presentacion\Vista\Mercado\UnidadesVendidasTotalPaisMercado.aspx" />
+    <Content Include="Presentacion\Vista\Mercado\ValoresMSMercado.aspx" />
+    <Content Include="Presentacion\Vista\Mercado\ValoresVendidosTotalPaisMercado.aspx" />
+    <Content Include="Presentacion\Vista\Producto\ValoresVendidosTotalPaisMercado.aspx" />
+    <Content Include="Presentacion\Vista\Producto\Productos.aspx" />
+    <Content Include="Presentacion\Vista\Producto\ProductosVal.aspx" />
+    <Content Include="Presentacion\Vista\Producto\UnidadesPaisXProducto.aspx" />
+    <Content Include="Presentacion\Vista\Producto\ValoresPaisXProducto.aspx" />
+    <Content Include="Presentacion\Vista\Region\Regiones.aspx" />
+    <Content Include="Presentacion\Vista\Region\RegionesVal.aspx" />
+    <Content Include="Presentacion\Vista\Region\UnidadesRegionMercado.aspx" />
+    <Content Include="Presentacion\Vista\Region\UnidadesRegionProductoXMercado.aspx" />
+    <Content Include="Presentacion\Vista\Region\ValoresRegionMercado.aspx" />
+    <Content Include="Presentacion\Vista\Region\ValoresRegionProductoXMercado.aspx" />
+    <Content Include="Presentacion\Vista\Representante\Representantes.aspx" />
+    <Content Include="Presentacion\Vista\Seleccion\Modulos.aspx" />
+    <Content Include="Presentacion\Vista\Seleccion\PruebaMail.aspx" />
+    <Content Include="Presentacion\Vista\Seleccion\SeleccionesVal.aspx" />
+    <Content Include="Presentacion\Vista\Seleccion\Seleciones.aspx" />
+    <Content Include="Presentacion\Vista\Simulador\SimuladorTerritorios.aspx" />
+    <Content Include="Presentacion\Vista\Trimestre\Trimestres.aspx" />
+    <Content Include="Presentacion\Vista\Trimestre\TrimestresVal.aspx" />
+    <Content Include="Presentacion\Vista\Trimestre\UnidadesPromedioTrimXBrickMercado.aspx" />
+    <Content Include="Presentacion\Vista\Trimestre\UnidadesPromedioTrimXBrickProducto.aspx" />
+    <Content Include="Presentacion\Vista\Trimestre\ValoresPromedioTrimXBrickMercado.aspx" />
+    <Content Include="Presentacion\Vista\Trimestre\ValoresPromedioTrimXBrickProducto.aspx" />
+    <Content Include="Scripts\ajax-data-table.js" />
+    <Content Include="Scripts\jquery-2.1.0.js" />
+    <Content Include="Scripts\jquery-2.1.0.min.js" />
+    <Content Include="Scripts\jquery.dropdownPlain.js" />
+    <Content Include="Scripts\ProcedureUsuario.sql" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\Autenticacion\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\Autenticacion\Service1.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccesoDeDatos\Conexion\ConexionSqlServer.cs" />
+    <Compile Include="AccesoDeDatos\Conexion\InterfazConexion\IConexionSqlServer.cs" />
+    <Compile Include="AccesoDeDatos\SqlServer\SqlServerAnoPeriodo.cs" />
+    <Compile Include="AccesoDeDatos\SqlServer\SqlServerMercadoProducto.cs" />
+    <Compile Include="AccesoDeDatos\SqlServer\SqlServerUsuario.cs" />
+    <Compile Include="Entidades\EUsuarios\AnoPeriodo.cs" />
+    <Compile Include="Entidades\EUsuarios\MercadoProducto.cs" />
+    <Compile Include="Entidades\EUsuarios\Usuario.cs" />
+    <Compile Include="LogicaDeNegocios\Clases\LNUsuarios\LogicaAnoPeriodo.cs" />
+    <Compile Include="LogicaDeNegocios\Clases\LNUsuarios\LogicaMercadoProducto.cs" />
+    <Compile Include="LogicaDeNegocios\Clases\LNUsuarios\LogicaUsuario.cs" />
+    <Compile Include="LogicaDeNegocios\Excepciones\ExcepcionConexion.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Presentacion\MasterPage\MenuSimulador.master.cs">
+      <DependentUpon>MenuSimulador.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MasterPage\MenuSimulador.master.designer.cs">
+      <DependentUpon>MenuSimulador.master</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MasterPage\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MasterPage\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MasterPage\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MasterPage\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MasterPage\Site2.Master.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MasterPage\Site2.Master.designer.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MasterPage\Site3.Master.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MasterPage\Site3.Master.designer.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\Bricks.aspx.cs">
+      <DependentUpon>Bricks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\Bricks.aspx.designer.cs">
+      <DependentUpon>Bricks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\BricksVal.aspx.cs">
+      <DependentUpon>BricksVal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\BricksVal.aspx.designer.cs">
+      <DependentUpon>BricksVal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\UnidadesCrecimientoXBrickMercadoProducto.aspx.cs">
+      <DependentUpon>UnidadesCrecimientoXBrickMercadoProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\UnidadesCrecimientoXBrickMercadoProducto.aspx.designer.cs">
+      <DependentUpon>UnidadesCrecimientoXBrickMercadoProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\UnidadesEnElMercado.aspx.cs">
+      <DependentUpon>UnidadesEnElMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\UnidadesEnElMercado.aspx.designer.cs">
+      <DependentUpon>UnidadesEnElMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\UnidadesEnElMercadoXProducto.aspx.cs">
+      <DependentUpon>UnidadesEnElMercadoXProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\UnidadesEnElMercadoXProducto.aspx.designer.cs">
+      <DependentUpon>UnidadesEnElMercadoXProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\UnidadesIEXBrickMercado.aspx.cs">
+      <DependentUpon>UnidadesIEXBrickMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\UnidadesIEXBrickMercado.aspx.designer.cs">
+      <DependentUpon>UnidadesIEXBrickMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\UnidadesMSXBrickMercado.aspx.cs">
+      <DependentUpon>UnidadesMSXBrickMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\UnidadesMSXBrickMercado.aspx.designer.cs">
+      <DependentUpon>UnidadesMSXBrickMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\UnidadesMSXTrimBrickMercadoProducto.aspx.cs">
+      <DependentUpon>UnidadesMSXTrimBrickMercadoProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\UnidadesMSXTrimBrickMercadoProducto.aspx.designer.cs">
+      <DependentUpon>UnidadesMSXTrimBrickMercadoProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\UnidadesXBrickEnElMercadoXProducto.aspx.cs">
+      <DependentUpon>UnidadesXBrickEnElMercadoXProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\UnidadesXBrickEnElMercadoXProducto.aspx.designer.cs">
+      <DependentUpon>UnidadesXBrickEnElMercadoXProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\ValoresCrecimientoXBrickMercadoProducto.aspx.cs">
+      <DependentUpon>ValoresCrecimientoXBrickMercadoProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\ValoresCrecimientoXBrickMercadoProducto.aspx.designer.cs">
+      <DependentUpon>ValoresCrecimientoXBrickMercadoProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\ValoresEnElMercado.aspx.cs">
+      <DependentUpon>ValoresEnElMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\ValoresEnElMercado.aspx.designer.cs">
+      <DependentUpon>ValoresEnElMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\ValoresEnElMercadoXProducto.aspx.cs">
+      <DependentUpon>ValoresEnElMercadoXProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\ValoresEnElMercadoXProducto.aspx.designer.cs">
+      <DependentUpon>ValoresEnElMercadoXProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\ValoresIEXBrickMercado.aspx.cs">
+      <DependentUpon>ValoresIEXBrickMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\ValoresIEXBrickMercado.aspx.designer.cs">
+      <DependentUpon>ValoresIEXBrickMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\ValoresMSXBrickMercado.aspx.cs">
+      <DependentUpon>ValoresMSXBrickMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\ValoresMSXBrickMercado.aspx.designer.cs">
+      <DependentUpon>ValoresMSXBrickMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\ValoresMSXTrimBrickMercadoProducto.aspx.cs">
+      <DependentUpon>ValoresMSXTrimBrickMercadoProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\ValoresMSXTrimBrickMercadoProducto.aspx.designer.cs">
+      <DependentUpon>ValoresMSXTrimBrickMercadoProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\ValoresXBrickEnElMercadoXProducto.aspx.cs">
+      <DependentUpon>ValoresXBrickEnElMercadoXProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Brick\ValoresXBrickEnElMercadoXProducto.aspx.designer.cs">
+      <DependentUpon>ValoresXBrickEnElMercadoXProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\Competidores.aspx.cs">
+      <DependentUpon>Competidores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\Competidores.aspx.designer.cs">
+      <DependentUpon>Competidores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\CompetidoresVal.aspx.cs">
+      <DependentUpon>CompetidoresVal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\CompetidoresVal.aspx.designer.cs">
+      <DependentUpon>CompetidoresVal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\UnidadesCompetidorCrecimientoTerritorioClaseXMercado.aspx.cs">
+      <DependentUpon>UnidadesCompetidorCrecimientoTerritorioClaseXMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\UnidadesCompetidorCrecimientoTerritorioClaseXMercado.aspx.designer.cs">
+      <DependentUpon>UnidadesCompetidorCrecimientoTerritorioClaseXMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\UnidadesCompetidoresBrickClaseXMercado.aspx.cs">
+      <DependentUpon>UnidadesCompetidoresBrickClaseXMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\UnidadesCompetidoresBrickClaseXMercado.aspx.designer.cs">
+      <DependentUpon>UnidadesCompetidoresBrickClaseXMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\UnidadesCompetidoresRegionClaseXMercado.aspx.cs">
+      <DependentUpon>UnidadesCompetidoresRegionClaseXMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\UnidadesCompetidoresRegionClaseXMercado.aspx.designer.cs">
+      <DependentUpon>UnidadesCompetidoresRegionClaseXMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\UnidadesCompetidorIExTerritorioClaseXMercado.aspx.cs">
+      <DependentUpon>UnidadesCompetidorIExTerritorioClaseXMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\UnidadesCompetidorIExTerritorioClaseXMercado.aspx.designer.cs">
+      <DependentUpon>UnidadesCompetidorIExTerritorioClaseXMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\UnidadesCompetidorMSxTerritorioClaseXMercado.aspx.cs">
+      <DependentUpon>UnidadesCompetidorMSxTerritorioClaseXMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\UnidadesCompetidorMSxTerritorioClaseXMercado.aspx.designer.cs">
+      <DependentUpon>UnidadesCompetidorMSxTerritorioClaseXMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\UnidadesCompetidorResumenXProductoXMercado.aspx.cs">
+      <DependentUpon>UnidadesCompetidorResumenXProductoXMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\UnidadesCompetidorResumenXProductoXMercado.aspx.designer.cs">
+      <DependentUpon>UnidadesCompetidorResumenXProductoXMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\UnidadesCompetidorTerritorioClaseXMercado.aspx.cs">
+      <DependentUpon>UnidadesCompetidorTerritorioClaseXMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\UnidadesCompetidorTerritorioClaseXMercado.aspx.designer.cs">
+      <DependentUpon>UnidadesCompetidorTerritorioClaseXMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\ValoresCompetidorCrecimientoTerritorioClaseXMercado.aspx.cs">
+      <DependentUpon>ValoresCompetidorCrecimientoTerritorioClaseXMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\ValoresCompetidorCrecimientoTerritorioClaseXMercado.aspx.designer.cs">
+      <DependentUpon>ValoresCompetidorCrecimientoTerritorioClaseXMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\ValoresCompetidoresBrickClaseXMercado.aspx.cs">
+      <DependentUpon>ValoresCompetidoresBrickClaseXMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\ValoresCompetidoresBrickClaseXMercado.aspx.designer.cs">
+      <DependentUpon>ValoresCompetidoresBrickClaseXMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\ValoresCompetidoresRegionClaseXMercado.aspx.cs">
+      <DependentUpon>ValoresCompetidoresRegionClaseXMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\ValoresCompetidoresRegionClaseXMercado.aspx.designer.cs">
+      <DependentUpon>ValoresCompetidoresRegionClaseXMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\ValoresCompetidorIExTerritorioClaseXMercado.aspx.cs">
+      <DependentUpon>ValoresCompetidorIExTerritorioClaseXMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\ValoresCompetidorIExTerritorioClaseXMercado.aspx.designer.cs">
+      <DependentUpon>ValoresCompetidorIExTerritorioClaseXMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\ValoresCompetidorMSxTerritorioClaseXMercado.aspx.cs">
+      <DependentUpon>ValoresCompetidorMSxTerritorioClaseXMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\ValoresCompetidorMSxTerritorioClaseXMercado.aspx.designer.cs">
+      <DependentUpon>ValoresCompetidorMSxTerritorioClaseXMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\ValoresCompetidorResumenXProductoXMercado.aspx.cs">
+      <DependentUpon>ValoresCompetidorResumenXProductoXMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\ValoresCompetidorResumenXProductoXMercado.aspx.designer.cs">
+      <DependentUpon>ValoresCompetidorResumenXProductoXMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\ValoresCompetidorTerritorioClaseXMercado.aspx.cs">
+      <DependentUpon>ValoresCompetidorTerritorioClaseXMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Competidor\ValoresCompetidorTerritorioClaseXMercado.aspx.designer.cs">
+      <DependentUpon>ValoresCompetidorTerritorioClaseXMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Email\EnvioEmail.aspx.cs">
+      <DependentUpon>EnvioEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Email\EnvioEmail.aspx.designer.cs">
+      <DependentUpon>EnvioEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Login\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Login\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\MercadosVal.aspx.cs">
+      <DependentUpon>MercadosVal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\MercadosVal.aspx.designer.cs">
+      <DependentUpon>MercadosVal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\PruebaDetalleUnidadesMarketShare.aspx.cs">
+      <DependentUpon>PruebaDetalleUnidadesMarketShare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\PruebaDetalleUnidadesMarketShare.aspx.designer.cs">
+      <DependentUpon>PruebaDetalleUnidadesMarketShare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\PruebaDetalleUnidadesMercado.aspx.cs">
+      <DependentUpon>PruebaDetalleUnidadesMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\PruebaDetalleUnidadesMercado.aspx.designer.cs">
+      <DependentUpon>PruebaDetalleUnidadesMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\Mercados.aspx.cs">
+      <DependentUpon>Mercados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\Mercados.aspx.designer.cs">
+      <DependentUpon>Mercados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\PruebaGridAnidados.aspx.cs">
+      <DependentUpon>PruebaGridAnidados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\PruebaGridAnidados.aspx.designer.cs">
+      <DependentUpon>PruebaGridAnidados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\PruebaUnidadesMarketShare.aspx.cs">
+      <DependentUpon>PruebaUnidadesMarketShare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\PruebaUnidadesMarketShare.aspx.designer.cs">
+      <DependentUpon>PruebaUnidadesMarketShare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\PruebaUnidadesMercado.aspx.cs">
+      <DependentUpon>PruebaUnidadesMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\PruebaUnidadesMercado.aspx.designer.cs">
+      <DependentUpon>PruebaUnidadesMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\UnidadesMSMercado.aspx.cs">
+      <DependentUpon>UnidadesMSMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\UnidadesMSMercado.aspx.designer.cs">
+      <DependentUpon>UnidadesMSMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\UnidadesVendidasTotalPaisMercado.aspx.cs">
+      <DependentUpon>UnidadesVendidasTotalPaisMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\UnidadesVendidasTotalPaisMercado.aspx.designer.cs">
+      <DependentUpon>UnidadesVendidasTotalPaisMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\ValoresMSMercado.aspx.cs">
+      <DependentUpon>ValoresMSMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\ValoresMSMercado.aspx.designer.cs">
+      <DependentUpon>ValoresMSMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\ValoresVendidosTotalPaisMercado.aspx.cs">
+      <DependentUpon>ValoresVendidosTotalPaisMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\ValoresVendidosTotalPaisMercado.aspx.designer.cs">
+      <DependentUpon>ValoresVendidosTotalPaisMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Producto\ValoresVendidosTotalPaisMercado.aspx.cs">
+      <DependentUpon>ValoresVendidosTotalPaisMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Producto\ValoresVendidosTotalPaisMercado.aspx.designer.cs">
+      <DependentUpon>ValoresVendidosTotalPaisMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Producto\Productos.aspx.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Producto\Productos.aspx.designer.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Producto\ProductosVal.aspx.cs">
+      <DependentUpon>ProductosVal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Producto\ProductosVal.aspx.designer.cs">
+      <DependentUpon>ProductosVal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Producto\UnidadesPaisXProducto.aspx.cs">
+      <DependentUpon>UnidadesPaisXProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Producto\UnidadesPaisXProducto.aspx.designer.cs">
+      <DependentUpon>UnidadesPaisXProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Producto\ValoresPaisXProducto.aspx.cs">
+      <DependentUpon>ValoresPaisXProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Producto\ValoresPaisXProducto.aspx.designer.cs">
+      <DependentUpon>ValoresPaisXProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Region\Regiones.aspx.cs">
+      <DependentUpon>Regiones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Region\Regiones.aspx.designer.cs">
+      <DependentUpon>Regiones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Region\RegionesVal.aspx.cs">
+      <DependentUpon>RegionesVal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Region\RegionesVal.aspx.designer.cs">
+      <DependentUpon>RegionesVal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Region\UnidadesRegionMercado.aspx.cs">
+      <DependentUpon>UnidadesRegionMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Region\UnidadesRegionMercado.aspx.designer.cs">
+      <DependentUpon>UnidadesRegionMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Region\UnidadesRegionProductoXMercado.aspx.cs">
+      <DependentUpon>UnidadesRegionProductoXMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Region\UnidadesRegionProductoXMercado.aspx.designer.cs">
+      <DependentUpon>UnidadesRegionProductoXMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Region\ValoresRegionMercado.aspx.cs">
+      <DependentUpon>ValoresRegionMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Region\ValoresRegionMercado.aspx.designer.cs">
+      <DependentUpon>ValoresRegionMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Region\ValoresRegionProductoXMercado.aspx.cs">
+      <DependentUpon>ValoresRegionProductoXMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Region\ValoresRegionProductoXMercado.aspx.designer.cs">
+      <DependentUpon>ValoresRegionProductoXMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Representante\Representantes.aspx.cs">
+      <DependentUpon>Representantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Representante\Representantes.aspx.designer.cs">
+      <DependentUpon>Representantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Seleccion\Modulos.aspx.cs">
+      <DependentUpon>Modulos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Seleccion\Modulos.aspx.designer.cs">
+      <DependentUpon>Modulos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Seleccion\PruebaMail.aspx.cs">
+      <DependentUpon>PruebaMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Seleccion\PruebaMail.aspx.designer.cs">
+      <DependentUpon>PruebaMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Seleccion\SeleccionesVal.aspx.cs">
+      <DependentUpon>SeleccionesVal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Seleccion\SeleccionesVal.aspx.designer.cs">
+      <DependentUpon>SeleccionesVal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Seleccion\Seleciones.aspx.cs">
+      <DependentUpon>Seleciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Seleccion\Seleciones.aspx.designer.cs">
+      <DependentUpon>Seleciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Simulador\SimuladorTerritorios.aspx.cs">
+      <DependentUpon>SimuladorTerritorios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Simulador\SimuladorTerritorios.aspx.designer.cs">
+      <DependentUpon>SimuladorTerritorios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Trimestre\Trimestres.aspx.cs">
+      <DependentUpon>Trimestres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Trimestre\Trimestres.aspx.designer.cs">
+      <DependentUpon>Trimestres.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Trimestre\TrimestresVal.aspx.cs">
+      <DependentUpon>TrimestresVal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Trimestre\TrimestresVal.aspx.designer.cs">
+      <DependentUpon>TrimestresVal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Trimestre\UnidadesPromedioTrimXBrickMercado.aspx.cs">
+      <DependentUpon>UnidadesPromedioTrimXBrickMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Trimestre\UnidadesPromedioTrimXBrickMercado.aspx.designer.cs">
+      <DependentUpon>UnidadesPromedioTrimXBrickMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Trimestre\UnidadesPromedioTrimXBrickProducto.aspx.cs">
+      <DependentUpon>UnidadesPromedioTrimXBrickProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Trimestre\UnidadesPromedioTrimXBrickProducto.aspx.designer.cs">
+      <DependentUpon>UnidadesPromedioTrimXBrickProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Trimestre\ValoresPromedioTrimXBrickMercado.aspx.cs">
+      <DependentUpon>ValoresPromedioTrimXBrickMercado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Trimestre\ValoresPromedioTrimXBrickMercado.aspx.designer.cs">
+      <DependentUpon>ValoresPromedioTrimXBrickMercado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Trimestre\ValoresPromedioTrimXBrickProducto.aspx.cs">
+      <DependentUpon>ValoresPromedioTrimXBrickProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Trimestre\ValoresPromedioTrimXBrickProducto.aspx.designer.cs">
+      <DependentUpon>ValoresPromedioTrimXBrickProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Autenticacion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Presentacion\MasterPage\Site.Master" />
+    <Content Include="Presentacion\MasterPage\Site1.Master" />
+    <Content Include="packages.config" />
+    <Content Include="Presentacion\Estilo\Scripts\jquery-2.1.0.min.map" />
+    <Content Include="Presentacion\MasterPage\Site2.Master" />
+    <Content Include="Presentacion\MasterPage\Site3.Master" />
+    <Content Include="Web References\Autenticacion\Service1.wsdl" />
+    <Content Include="Presentacion\MasterPage\MenuSimulador.master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="Presentacion\Graficas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:2230/Service1.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Autenticacion\</RelPath>
+      <UpdateFromURL>http://localhost:2230/Service1.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PFIZER_FFVV_Autenticacion_Autenticar</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1217</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1217/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

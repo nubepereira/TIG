@@ -1,0 +1,5 @@
+C:\Users\NUBIELIS\Documents\Visual Studio 2012\Projects\PFIZER_FFVV_v25_SegundaParteV3_1\WsPFIZER_FFVV\bin\WsPFIZER_FFVV.dll
+C:\Users\NUBIELIS\Documents\Visual Studio 2012\Projects\PFIZER_FFVV_v25_SegundaParteV3_1\WsPFIZER_FFVV\bin\WsPFIZER_FFVV.pdb
+C:\Users\NUBIELIS\Documents\Visual Studio 2012\Projects\PFIZER_FFVV_v25_SegundaParteV3_1\WsPFIZER_FFVV\obj\Debug\WsPFIZER_FFVV.csprojResolveAssemblyReference.cache
+C:\Users\NUBIELIS\Documents\Visual Studio 2012\Projects\PFIZER_FFVV_v25_SegundaParteV3_1\WsPFIZER_FFVV\obj\Debug\WsPFIZER_FFVV.dll
+C:\Users\NUBIELIS\Documents\Visual Studio 2012\Projects\PFIZER_FFVV_v25_SegundaParteV3_1\WsPFIZER_FFVV\obj\Debug\WsPFIZER_FFVV.pdb

@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="PFIZER_FFVV.Presentacion.MasterPage.Site2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head id="Head1" runat="server">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../Estilo/style.css" media="screen" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>    
+</head>
+
+<body>
+<form id="form2" runat="server">
+<div>
+      <div id="content">
+        <%--<asp:scriptmanager id="ScriptManager1" runat="server" />--%>
+            <div id="top_info">
+                <a class="auto-style2">
+                    <asp:Image ID="LogoRemoto" runat="server" ImageUrl="~/Presentacion/Imagenes/logoRemoto.png" Width="170px" style="text-align: left; top: 2px; position: relative; left: 0px;" Height="42px" />
+                </a>
+                <p><% OutputDay(); %></p>
+            </div>
+        <div id="logo">
+              <a class="auto-style2"> 
+                <asp:Image ID="LogoPfizer" runat="server" ImageUrl="~/Presentacion/Imagenes/pfizerLogo.png" style="margin-right: 0px; top: 4px; position: relative; left: 0px;" Width="95px"/>
+              </a>
+              <h1>
+                <span class="auto-style29"><span class="auto-style30">Reportes Moviles Territorios Organizacionales
+                </span>
+                <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <a>
+                      <asp:Image ID="LogoRemoto2" runat="server" ImageUrl="~/Presentacion/Imagenes/logoRemoto.png"  Width="125px" style="text-align: center"/>
+              </a>
+              </span>
+          </h1>
+          <br />
+          <br />
+        </div>  
+     </div>
+
+    <div class="main">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+
+
+
+    <asp:Panel ID="Panel1" runat="server" style="margin-left: 866px; position: relative; top: 0px; text-align: right; font-family: Tahoma; width: 338px;" Width="338px" CssClass="auto-style31">
+        <strong><span class="auto-style29">Bienvenido:</span><span class="auto-style22">
+        <asp:Label ID="LblUsuario" runat="server" style="color: #FF6600" Text="" Visible="true"></asp:Label>
+        &nbsp;&nbsp; </span></strong>
+        <asp:Button ID="btLogOut" runat="server" style="text-align: right; margin-bottom: 0px; font-family: tah;" Text="Cerrar Sesion" onclick="btLogOut_Click"/>
+   </asp:Panel>
+    <asp:Label ID="LblFicha" runat="server" Text="" Enabled="false" Visible="false"></asp:Label>
+   <br />
+
+</div>  
+    <div class="main">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

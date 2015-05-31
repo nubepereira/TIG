@@ -1,0 +1,225 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="PFIZER_FFVV.Presentacion.MasterPage.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head id="Head1" runat="server">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../Estilo/style.css" media="screen" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>    
+
+<%--    <script runat="server">
+        void Menu1_MenuItemDataBound(object sender, MenuEventArgs e)
+        { 
+        //obtiene el item inicial del menu
+            MenuItem item = e.Item;
+        
+            // Usar la propiedad "Selected" para selecionar la opcion del menu "Selecciones"
+            //  item del menu cuando la pagina carga por primera vez
+            if (item.Text == "Selecciones")
+            {
+                item.Selected = true;
+            }
+        }     
+    </script>--%>
+</head>
+
+<body>
+<form id="form1" runat="server">
+<div>
+      <div id="content">
+        <%--<asp:scriptmanager id="ScriptManager1" runat="server" />--%>
+        <div id="top_info">
+            <a class="auto-style2">
+                <asp:Image ID="LogoRemoto" runat="server" ImageUrl="~/Presentacion/Imagenes/logoRemoto.png" Width="170px" style="text-align: left; top: 2px; position: relative; left: 0px;" Height="42px" />
+            </a>
+            <p><% OutputDay(); %></p>
+        </div>
+      <div id="logo">
+          <a class="auto-style2"> 
+            <asp:Image ID="LogoPfizer" runat="server" ImageUrl="~/Presentacion/Imagenes/pfizerLogo.png" style="margin-right: 0px; top: 4px; position: relative; left: 0px;" Width="95px"/>
+          </a>
+          <h1>
+              <span class="auto-style29"><span class="auto-style30">Reportes Moviles Territorios Organizacionales
+                  </span>
+                  <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                  <a>
+                      <asp:Image ID="LogoRemoto2" runat="server" ImageUrl="~/Presentacion/Imagenes/logoRemoto.png"  Width="125px" style="text-align: center"/>
+                  </a>
+              </span>
+          </h1>
+        <br />
+        <br />
+      </div>  
+     </div>
+
+    <div class="main">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+
+
+
+    <asp:Panel ID="Panel1" runat="server" style="margin-left: 100px; position: relative; top: 0px; text-align: left; font-family: Tahoma; width: 1200px;" Width="338px" CssClass="auto-style31">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="btMenu" runat="server" style="text-align: right; margin-bottom: 0px; font-family: tah;" Text="Volver Menu de Inicio " OnClick="btMenu_Click" Width="138px"/>
+        <strong>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="auto-style29">Bienvenido:</span><span class="auto-style22">
+        <asp:Label ID="LblUsuario" runat="server" style="color: #FF6600" Text="" Visible="true"></asp:Label>
+        &nbsp;&nbsp; </span></strong>
+        <asp:Button ID="btLogOut" runat="server" style="text-align: right; margin-bottom: 0px; font-family: tah;" Text="Cerrar Sesion" OnClick="btLogOut_Click"/>
+   </asp:Panel>
+    <asp:Label ID="LblFicha" runat="server" Text="" Enabled="false" Visible="false"></asp:Label>
+   <br />
+    
+<%--<div id="tablist">        
+                <ul>
+                <!--class="current"-->
+                <li><a class="current" href="../Seleccion/Seleciones.aspx" accesskey="s"><span class="key">S</span>elecciones</a></li>
+                <li><a href="../Mercado/Mercados.aspx" accesskey="m"><span class="key">M</span>ercados</a></li>
+                <li><a href="../Producto/Productos.aspx" accesskey="p"><span class="key">P</span>roductos</a></li>
+                <li><a href="../Gerente/Gerentes.aspx" accesskey="g"><span class="key">G</span>erentes</a></li>
+                <li><a href="../Representante/Representantes.aspx" accesskey="r"><span class="key">R</span>epresentantes</a></li>
+                <li><a href="../Competidor/Competidores.aspx" accesskey="c"><span class="key">C</span>ompetidores</a></li>
+                <li><a href="../Brick/Bricks.aspx" accesskey="b"><span class="key">B</span>ricks  </a></li>
+                <li><a href="../Trimestre/Trimestres.aspx" accesskey="t"><span class="key">T</span>rimestre</a></li>
+                <li><a href="../Region/Regiones.aspx" accesskey="e">R<span class="key" onclick="true">e</span>gion</a></li>
+                </ul><br />--%>
+
+      <table class="auto-style32">
+          <tr>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+              <td>
+                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" 
+                    StaticSelectedStyle-BackColor="#6699ff" 
+                    OnMenuItemDataBound="Menu1_MenuItemDataBound" 
+                    OnMenuItemClick="Menu1_MenuItemClick"
+                    StaticSelectedStyle-CssClass="MenuItem_selected"
+                    StaticMenuItemStyle-CssClass="MenuItem"
+                    StaticMenuItemStyle-HorizontalPadding="20px"  ForeColor="#ffffff"  BackColor="#ff9900"
+                    StaticHoverStyle-BackColor="#6699ff"
+                    DynamicHoverStyle-BackColor="#6699ff"         
+                    DynamicMenuStyle-BackColor="#6699ff"
+                    DynamicSelectedStyle-BackColor="#6699ff" 
+                    DynamicMenuItemStyle-HorizontalPadding="20px" 
+                    style="font-weight: 700; text-align: center; font-size: small;">
+        
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Seleccion/Seleciones.aspx" Text="Selecciones" Value="s" Selected="false"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Mercado/Mercados.aspx" Text="Mercados" Value="m" Selected="true"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Producto/Productos.aspx" Text="Productos" Value="p" Selected="false"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Representante/Gerentes.aspx" Text="Gerentes" Value="g"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Representante/Representantes.aspx" Text="Representantes" Value="r"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Competidor/Competidores.aspx" Text="Competidores" Value="c" Selected="false"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Brick/Bricks.aspx" Text="Bricks" Value="b" Selected="false"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Trimestre/Trimestres.aspx" Text="Trimestres" Value="t" Selected="false"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Region/Regiones.aspx" Text="Regiones" Value="e" Selected="false"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                  <%--<asp:SiteMapDataSource ID="MenuSource" runat="server" />--
+                  <%--<asp:SiteMapDataSource ID="MenuSource" runat="server" />--%>
+              </td>
+             
+          </tr>
+      </table>
+    <br />
+    <br />
+    <fieldset style="width:5px; height:auto; margin-left:12%; margin-right: 11%; position: relative; top: 0px;" >
+    <legend>Opciones Selecionadas: </legend>      
+           <table>
+                            <tr>
+                                <td class="auto-style41"; style="border: 1px solid #EEEEEE">Años:</td>
+                                <td style="border: 1px solid #EEEEEE; background-color: #FFCC99;" class="auto-style43">
+
+                                    <%-- <asp:Label ID="Label1" runat="server" Text=""></asp:Label>--%>
+                                    <asp:ListBox ID="ListBox1" runat="server"></asp:ListBox>
+                                    <%--<asp:DropDownList ID="DropDownList1" DataSourceID="SqlDataSource7" AutoPostBack="True"
+                                        DataTextField="ANO" runat="server" AppendDataBoundItems="True" BackColor="#FFCC99" >
+                                        <asp:ListItem Value="0">R.E.M.O.T.O.</asp:ListItem>
+                                    </asp:DropDownList>
+                                    <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:ConnPFIZER %>" SelectCommand="AnosSeleccionados" SelectCommandType="StoredProcedure">
+                                        <SelectParameters>
+                                            <asp:SessionParameter Name="ano" SessionField="SesionUsuarioAno" Type="String" />
+                                        </SelectParameters>
+                                    </asp:SqlDataSource>--%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style41"; style="border: 1px solid #EEEEEE">Periodos:</td>
+                                <td style="border: 1px solid #EEEEEE; background-color: #FFCC99;" class="auto-style43">
+                                <asp:DropDownList ID="DropDownListPeriodos" DataSourceID="SqlDataSource5" AutoPostBack="True"
+                                     DataTextField="PERIODO" runat="server" AppendDataBoundItems="True" BackColor="#FFCC99" >
+                                <asp:ListItem Value="0">R.E.M.O.T.O.</asp:ListItem>
+                                </asp:DropDownList>
+                                <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:ConnPFIZER %>" SelectCommand="PeriodosSeleccionados" SelectCommandType="StoredProcedure">
+                                    <SelectParameters>
+                                        <asp:SessionParameter Name="periodo" SessionField="SesionUsuarioPeriodo" Type="String" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style41"; style="border: 1px solid #EEEEEE">Lineas:</td>
+                                <td style="border: 1px solid #EEEEEE; background-color: #FFCC99;" class="auto-style43">
+                                    <asp:DropDownList ID="DropDownListLineas" DataSourceID="SqlDataSource4" AutoPostBack="True"
+                                        DataTextField="LINEA" runat="server" AppendDataBoundItems="True" BackColor="#FFCC99" >
+                                    <asp:ListItem Value="0">R.E.M.O.T.O.</asp:ListItem>
+                                    </asp:DropDownList>
+                                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnPFIZER %>" SelectCommand="LineasSeleccionadas" SelectCommandType="StoredProcedure">
+                                        <SelectParameters>
+                                            <asp:SessionParameter Name="linea" SessionField="SesionUsuarioLinea" Type="String" />
+                                        </SelectParameters>
+                                    </asp:SqlDataSource>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style41"; style="border: 1px solid #EEEEEE">Mercados:</td>
+                                <td style="border: 1px solid #EEEEEE; background-color: #FFCC99;" class="auto-style43">
+                                    <asp:DropDownList ID="DropDownListMercados" DataSourceID="SqlDataSource2" AutoPostBack="True"
+                                        DataTextField="MERCADO" runat="server" AppendDataBoundItems="True" BackColor="#FFCC99" >
+                                    <asp:ListItem Value="0">R.E.M.O.T.O.</asp:ListItem>
+                                    </asp:DropDownList>
+                                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnPFIZER %>" SelectCommand="MercadosSeleccionados" SelectCommandType="StoredProcedure">
+                                        <SelectParameters>
+                                            <asp:SessionParameter Name="mercado" SessionField="SesionUsuarioMercado" Type="String" />
+                                        </SelectParameters>
+                                    </asp:SqlDataSource>
+                                </td>
+                            </tr>
+                        </table> 
+            </fieldset>
+    <br />
+    <br />
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">  
+        
+        </asp:ContentPlaceHolder>
+</div> 
+
+<%--</div> --%>
+    
+    </form>
+</body>
+</html>
+
+
+<!--class="Selecciones" 
+class="Mercados"
+class="Productos"
+class="Gerentes" 
+class="Representantes"
+class="Competidores"
+class="Bricks" 
+class="Trimestres"
+class="Regiones"-->

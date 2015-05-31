@@ -1,0 +1,1 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/MasterPage/MenuSimulador.master" AutoEventWireup="true" CodeBehind="SimuladorTerritorios.aspx.cs" Inherits="PFIZER_FFVV.Presentacion.Vista.Simulador.SimuladorTerritorios" %>

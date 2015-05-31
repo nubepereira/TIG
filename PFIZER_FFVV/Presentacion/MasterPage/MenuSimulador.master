@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Presentacion/MasterPage/Site1.Master" AutoEventWireup="true" CodeBehind="MenuSimulador.master.cs" Inherits="PFIZER_FFVV.Presentacion.MasterPage.MenuSimulador" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+     <asp:Panel ID="Panel1" runat="server" style="margin-left: 100px; position: relative; top: 0px; text-align: left; font-family: Tahoma; width: 1200px;" Width="338px" CssClass="auto-style31">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="btMenu" runat="server" style="text-align: right; margin-bottom: 0px; font-family: tah;" Text="Volver Menu de Inicio " OnClick="btMenu_Click" Width="138px"/>
+        <strong>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="auto-style29">Bienvenido:</span><span class="auto-style22">
+        <asp:Label ID="LblUsuario" runat="server" style="color: #FF6600" Text="" Visible="true"></asp:Label>
+        &nbsp;&nbsp; </span></strong>
+        <asp:Button ID="btLogOut" runat="server" style="text-align: right; margin-bottom: 0px; font-family: tah;" Text="Cerrar Sesion" OnClick="btLogOut_Click"/>
+   </asp:Panel>
+    <asp:Label ID="LblFicha" runat="server" Text="" Enabled="false" Visible="false"></asp:Label>
+     <br />
+<%--     <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="0.8em" PathSeparator=" : " style="font-size: small">
+         <CurrentNodeStyle ForeColor="#333333" />
+         <NodeStyle Font-Bold="True" ForeColor="#284E98" />
+         <PathSeparatorStyle Font-Bold="True" ForeColor="#507CD1" />
+         <RootNodeStyle Font-Bold="True" ForeColor="#507CD1" />
+     </asp:SiteMapPath>--%>
+   <br />
+</asp:Content>
