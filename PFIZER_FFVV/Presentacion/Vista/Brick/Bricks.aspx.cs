@@ -4,8 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
+using PFIZER_FFVV.Presentacion.MasterPage;
 
 namespace PFIZER_FFVV.Presentacion.Vista.Brick
 {
@@ -15,13 +16,15 @@ namespace PFIZER_FFVV.Presentacion.Vista.Brick
         {
             try
             {
-
+                var miMaster = (Site)this.Master;
+                System.Web.UI.WebControls.Menu mimenu = (System.Web.UI.WebControls.Menu)miMaster.FindControl("Menu1");
+                mimenu.Items[6].Selected = true;
             }
             catch (IOException error)
             {
                 if (Session["SesionUsuarioAno"] == null || Session["SesionUsuarioPeriodo"] == null || Session["SesionUsuarioLinea"] == null | Session["SesionUsuarioMercado"] == null)
                 {
-                    MessageBox.Show("Ha expirado el tiempo de espera de la aplicacion", "BRICKS");
+                    MessageBox.Show("Debe seleccionar Datos correctos para continuar!", "BRICKS");
                     Response.Redirect("~/Presentacion/Vista/Seleccion/Seleciones.aspx");
                 }
                 else { 

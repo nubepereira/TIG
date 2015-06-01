@@ -12,7 +12,7 @@
         </tr>
     </table>
 
-<fieldset style="width:750px; height:auto; margin-left:15%; left: 200px; position: relative; top: -190px;">
+<fieldset style="width:750px; height:auto; margin-left:15%; left: 200px; position: relative; top: -330px;">
       <legend>Brick/ % Valores x Brick en el Mercado x Producto</legend> 
     <table style="top: 0px; position:relative; left: 10px;">
       <tr>

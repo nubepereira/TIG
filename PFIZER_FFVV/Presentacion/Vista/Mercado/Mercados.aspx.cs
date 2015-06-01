@@ -18,16 +18,9 @@ namespace PFIZER_FFVV.Presentacion.Vista.Mercado
             System.Web.UI.WebControls.Menu mimenu = (System.Web.UI.WebControls.Menu)miMaster.FindControl("Menu1");
              mimenu.Items[1].Selected=true;
 
-            if (Session["SesionUsuarioAno"] != null && Session["SesionUsuarioPeriodo"] != null && Session["SesionUsuarioLinea"] != null && Session["SesionUsuarioMercado"] != null)
+            if (Session["SesionUsuarioAno"] == null && Session["SesionUsuarioPeriodo"] == null && Session["SesionUsuarioLinea"] == null && Session["SesionUsuarioMercado"] == null)
             {
-
-                //persona = (Usuario)Session["SesionUsuario"];
-                //string idPersona = persona.CodigoPersona;                
-
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar Datos en la Página actual para continuar!", "MERCADOS");
+                MessageBox.Show("Debe seleccionar Datos correctos para continuar!", "MERCADOS");
                 Response.Redirect("~/Presentacion/Vista/Seleccion/Seleciones.aspx");
             }
         }

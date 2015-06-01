@@ -11,7 +11,7 @@
             </td>
         </tr>
     </table>
-<fieldset style="width:373px; height:auto; margin-left:15%; left: 200px; position: relative; top: -190px;">
+<fieldset style="width:373px; height:auto; margin-left:15%; left: 200px; position: relative; top: -330px;">
       <legend>Competidores/ Unid Resumen x Producto x Mercado</legend> 
 
     <table style="top: 0px; position:relative; left: 10px;">

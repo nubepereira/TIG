@@ -1,4 +1,4 @@
-﻿<%@ Title="R.E.M.O.T.O." Language="C#" MasterPageFile="~/Presentacion/MasterPage/Site.Master"  AutoEventWireup="true" CodeBehind="ValoresVendidosTotalPaisMercado.aspx.cs" Inherits="PFIZER_FFVV.Presentacion.Vista.Mercado.ValoresVendidosTotalPaisMercado1" %>
+﻿<%@ Page Title="R.E.M.O.T.O." Language="C#" MasterPageFile="~/Presentacion/MasterPage/Site3.Master" AutoEventWireup="true" CodeBehind="ValoresVendidosTotalPaisMercado.aspx.cs" Inherits="PFIZER_FFVV.Presentacion.Vista.Mercado.ValoresVendidosTotalPaisMercado" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
      <link rel="Shortcut Icon" href="../../Imagenes/FaviconRemoto.png"/>
 </asp:Content>
@@ -11,7 +11,7 @@
             </td>
         </tr>
     </table>
-    <fieldset style="width:373px; height:auto; margin-left:15%; left: 200px; position: relative; top: -170px;" >        
+    <fieldset style="width:373px; height:auto; margin-left:15%; left: 200px; position: relative; top: -330px;" >        
     <legend>Mercados/ Valores Vendidas Total Pais</legend> 
      <table>
       <tr>
@@ -80,3 +80,4 @@
 </asp:Panel>
     <br />
 </asp:Content>
+

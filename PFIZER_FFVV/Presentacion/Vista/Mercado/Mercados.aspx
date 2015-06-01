@@ -50,7 +50,7 @@
     <asp:Label ID="LblFicha" runat="server" Text="" Enabled="false" Visible="false"></asp:Label>
     
 
-    <table style="border: 1px solid #EEEEEE; left: 450px; position: relative; top: -130px;">
+    <table style="border: 1px solid #EEEEEE; left: 480px; position: relative; top: -200px;">
         <tr>
             <td class="auto-style21"; style="border: 1px dotted #CCCCCC; padding: 1px 4px; align-content:center;">
                 <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/Presentacion/Imagenes/graficoTablas.png" PostBackUrl="~/Presentacion/Vista/Mercado/UnidadesVendidasTotalPaisMercado.aspx" style="text-align: center" Height="28px" Width="29px" />

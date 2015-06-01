@@ -12,7 +12,7 @@
             </td>
         </tr>
     </table>
-<fieldset style="width:700px; height:auto; margin-left:15%; left: 200px; position: relative; top: -190px;">
+<fieldset style="width:700px; height:auto; margin-left:15%; left: 200px; position: relative; top: -330px;">
      <legend>Competidores/ Valores Territorio Clase X Mercado</legend> 
     
     <table style="top: 0px; position:relative; left: 10px;">

@@ -11,7 +11,7 @@
             </td>
         </tr>
     </table>     
-<fieldset style="width:780px; height:auto; margin-left:15%; left: 200px; position: relative; top: -190px;">
+<fieldset style="width:780px; height:auto; margin-left:15%; left: 200px; position: relative; top: -330px;">
       <legend>Brick/ MS Trim Producto x Brick en el Mercado</legend> 
 
     <table style="top: 0px; position:relative; left: 10px;">

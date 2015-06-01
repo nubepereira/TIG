@@ -380,8 +380,8 @@
     <Content Include="Presentacion\Vista\Mercado\UnidadesMSMercado.aspx" />
     <Content Include="Presentacion\Vista\Mercado\UnidadesVendidasTotalPaisMercado.aspx" />
     <Content Include="Presentacion\Vista\Mercado\ValoresMSMercado.aspx" />
+    <Content Include="Presentacion\Vista\Mercado\aaa.aspx" />
     <Content Include="Presentacion\Vista\Mercado\ValoresVendidosTotalPaisMercado.aspx" />
-    <Content Include="Presentacion\Vista\Producto\ValoresVendidosTotalPaisMercado.aspx" />
     <Content Include="Presentacion\Vista\Producto\Productos.aspx" />
     <Content Include="Presentacion\Vista\Producto\ProductosVal.aspx" />
     <Content Include="Presentacion\Vista\Producto\UnidadesPaisXProducto.aspx" />
@@ -802,18 +802,18 @@
     <Compile Include="Presentacion\Vista\Mercado\ValoresMSMercado.aspx.designer.cs">
       <DependentUpon>ValoresMSMercado.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\aaa.aspx.cs">
+      <DependentUpon>aaa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista\Mercado\aaa.aspx.designer.cs">
+      <DependentUpon>aaa.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Vista\Mercado\ValoresVendidosTotalPaisMercado.aspx.cs">
       <DependentUpon>ValoresVendidosTotalPaisMercado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentacion\Vista\Mercado\ValoresVendidosTotalPaisMercado.aspx.designer.cs">
-      <DependentUpon>ValoresVendidosTotalPaisMercado.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\Vista\Producto\ValoresVendidosTotalPaisMercado.aspx.cs">
-      <DependentUpon>ValoresVendidosTotalPaisMercado.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Presentacion\Vista\Producto\ValoresVendidosTotalPaisMercado.aspx.designer.cs">
       <DependentUpon>ValoresVendidosTotalPaisMercado.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Vista\Producto\Productos.aspx.cs">

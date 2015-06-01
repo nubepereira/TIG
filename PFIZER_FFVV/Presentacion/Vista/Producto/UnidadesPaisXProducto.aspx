@@ -11,7 +11,7 @@
             </td>
         </tr>
     </table>
-<fieldset style="width:373px; height:auto; margin-left:15%; left: 200px; position: relative; top: -170px;">
+<fieldset style="width:373px; height:auto; margin-left:15%; left: 200px; position: relative; top: -330px;">
 
      <legend>Productos/ Unid Pais Producto</legend> 
         

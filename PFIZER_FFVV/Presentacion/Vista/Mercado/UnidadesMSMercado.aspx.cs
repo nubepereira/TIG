@@ -13,7 +13,7 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using iTextSharp.text.html.simpleparser;
 using System.Data;
-
+using PFIZER_FFVV.Presentacion.MasterPage;
 
 namespace PFIZER_FFVV.Presentacion.Vista.Mercado
 {
@@ -21,10 +21,21 @@ namespace PFIZER_FFVV.Presentacion.Vista.Mercado
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            var miMaster = (Site)this.Master;
+            System.Web.UI.WebControls.Menu mimenu = (System.Web.UI.WebControls.Menu)miMaster.FindControl("Menu1");
+             mimenu.Items[1].Selected=true;
+
+
             //Label1.Text = "R.E.M.O.T.O";
             //Label3.Text = Session["SesionUsuarioEmail"].ToString();
             Label3.Text = "nubi30@gmail.com"; 
             //Response.Redirect("~/Presentacion/Vista/Email/EnvioEmail.aspx");
+
+            if (Session["SesionUsuarioAno"] == null && Session["SesionUsuarioPeriodo"] == null && Session["SesionUsuarioLinea"] == null && Session["SesionUsuarioMercado"] == null)
+            {
+                MessageBox.Show("Debe seleccionar Datos correctos para continuar!", "MERCADOS");
+                Response.Redirect("~/Presentacion/Vista/Seleccion/Seleciones.aspx");
+            }
         }
 
         protected void EnvioEmailSMTP()

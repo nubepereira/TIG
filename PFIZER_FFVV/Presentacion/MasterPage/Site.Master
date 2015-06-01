@@ -9,27 +9,12 @@
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>    
 
-<%--    <script runat="server">
-        void Menu1_MenuItemDataBound(object sender, MenuEventArgs e)
-        { 
-        //obtiene el item inicial del menu
-            MenuItem item = e.Item;
-        
-            // Usar la propiedad "Selected" para selecionar la opcion del menu "Selecciones"
-            //  item del menu cuando la pagina carga por primera vez
-            if (item.Text == "Selecciones")
-            {
-                item.Selected = true;
-            }
-        }     
-    </script>--%>
 </head>
 
 <body>
 <form id="form1" runat="server">
 <div>
       <div id="content">
-        <%--<asp:scriptmanager id="ScriptManager1" runat="server" />--%>
         <div id="top_info">
             <a class="auto-style2">
                 <asp:Image ID="LogoRemoto" runat="server" ImageUrl="~/Presentacion/Imagenes/logoRemoto.png" Width="170px" style="text-align: left; top: 2px; position: relative; left: 0px;" Height="42px" />
@@ -82,20 +67,6 @@
    </asp:Panel>
     <asp:Label ID="LblFicha" runat="server" Text="" Enabled="false" Visible="false"></asp:Label>
    <br />
-    
-<%--<div id="tablist">        
-                <ul>
-                <!--class="current"-->
-                <li><a class="current" href="../Seleccion/Seleciones.aspx" accesskey="s"><span class="key">S</span>elecciones</a></li>
-                <li><a href="../Mercado/Mercados.aspx" accesskey="m"><span class="key">M</span>ercados</a></li>
-                <li><a href="../Producto/Productos.aspx" accesskey="p"><span class="key">P</span>roductos</a></li>
-                <li><a href="../Gerente/Gerentes.aspx" accesskey="g"><span class="key">G</span>erentes</a></li>
-                <li><a href="../Representante/Representantes.aspx" accesskey="r"><span class="key">R</span>epresentantes</a></li>
-                <li><a href="../Competidor/Competidores.aspx" accesskey="c"><span class="key">C</span>ompetidores</a></li>
-                <li><a href="../Brick/Bricks.aspx" accesskey="b"><span class="key">B</span>ricks  </a></li>
-                <li><a href="../Trimestre/Trimestres.aspx" accesskey="t"><span class="key">T</span>rimestre</a></li>
-                <li><a href="../Region/Regiones.aspx" accesskey="e">R<span class="key" onclick="true">e</span>gion</a></li>
-                </ul><br />--%>
 
       <table class="auto-style32">
           <tr>
@@ -119,16 +90,14 @@
                         <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Seleccion/Seleciones.aspx" Text="Selecciones" Value="s" Selected="false"></asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Mercado/Mercados.aspx" Text="Mercados" Value="m" Selected="false"></asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Producto/Productos.aspx" Text="Productos" Value="p" Selected="false"></asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Representante/Gerentes.aspx" Text="Gerentes" Value="g"></asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Representante/Representantes.aspx" Text="Representantes" Value="r"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Representante/Gerentes.aspx" Text="Gerentes" Value="g" Selected="false"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Representante/Representantes.aspx" Text="Representantes" Value="r" Selected="false"></asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Competidor/Competidores.aspx" Text="Competidores" Value="c" Selected="false"></asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Brick/Bricks.aspx" Text="Bricks" Value="b" Selected="false"></asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Trimestre/Trimestres.aspx" Text="Trimestres" Value="t" Selected="false"></asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/Presentacion/Vista/Region/Regiones.aspx" Text="Regiones" Value="e" Selected="false"></asp:MenuItem>
                     </Items>
                 </asp:Menu>
-                  <%--<asp:SiteMapDataSource ID="MenuSource" runat="server" />--
-                  <%--<asp:SiteMapDataSource ID="MenuSource" runat="server" />--%>
               </td>
              
           </tr>
@@ -140,61 +109,26 @@
            <table>
                             <tr>
                                 <td class="auto-style41"; style="border: 1px solid #EEEEEE">Años:</td>
-                                <td style="border: 1px solid #EEEEEE; background-color: #FFCC99;" class="auto-style43">
-
-                                    <%-- <asp:Label ID="Label1" runat="server" Text=""></asp:Label>--%>
-                                    <asp:ListBox ID="ListBox1" runat="server"></asp:ListBox>
-                                    <%--<asp:DropDownList ID="DropDownList1" DataSourceID="SqlDataSource7" AutoPostBack="True"
-                                        DataTextField="ANO" runat="server" AppendDataBoundItems="True" BackColor="#FFCC99" >
-                                        <asp:ListItem Value="0">R.E.M.O.T.O.</asp:ListItem>
-                                    </asp:DropDownList>
-                                    <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:ConnPFIZER %>" SelectCommand="AnosSeleccionados" SelectCommandType="StoredProcedure">
-                                        <SelectParameters>
-                                            <asp:SessionParameter Name="ano" SessionField="SesionUsuarioAno" Type="String" />
-                                        </SelectParameters>
-                                    </asp:SqlDataSource>--%>
+                                <td style="border: 1px solid #EEEEEE; background-color: #FFCC99" class="auto-style43">
+                                    <asp:ListBox ID="LBAnos" runat="server" Width="116px" Height="50px"></asp:ListBox>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="auto-style41"; style="border: 1px solid #EEEEEE">Periodos:</td>
                                 <td style="border: 1px solid #EEEEEE; background-color: #FFCC99;" class="auto-style43">
-                                <asp:DropDownList ID="DropDownListPeriodos" DataSourceID="SqlDataSource5" AutoPostBack="True"
-                                     DataTextField="PERIODO" runat="server" AppendDataBoundItems="True" BackColor="#FFCC99" >
-                                <asp:ListItem Value="0">R.E.M.O.T.O.</asp:ListItem>
-                                </asp:DropDownList>
-                                <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:ConnPFIZER %>" SelectCommand="PeriodosSeleccionados" SelectCommandType="StoredProcedure">
-                                    <SelectParameters>
-                                        <asp:SessionParameter Name="periodo" SessionField="SesionUsuarioPeriodo" Type="String" />
-                                    </SelectParameters>
-                                </asp:SqlDataSource>
+                                    <asp:ListBox ID="LBPeriodos" runat="server" Width="115px" Height="50px"></asp:ListBox>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="auto-style41"; style="border: 1px solid #EEEEEE">Lineas:</td>
                                 <td style="border: 1px solid #EEEEEE; background-color: #FFCC99;" class="auto-style43">
-                                    <asp:DropDownList ID="DropDownListLineas" DataSourceID="SqlDataSource4" AutoPostBack="True"
-                                        DataTextField="LINEA" runat="server" AppendDataBoundItems="True" BackColor="#FFCC99" >
-                                    <asp:ListItem Value="0">R.E.M.O.T.O.</asp:ListItem>
-                                    </asp:DropDownList>
-                                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnPFIZER %>" SelectCommand="LineasSeleccionadas" SelectCommandType="StoredProcedure">
-                                        <SelectParameters>
-                                            <asp:SessionParameter Name="linea" SessionField="SesionUsuarioLinea" Type="String" />
-                                        </SelectParameters>
-                                    </asp:SqlDataSource>
+                                    <asp:ListBox ID="LBLineas" runat="server" Width="115px" Height="50px"></asp:ListBox>                                    
                                 </td>
                             </tr>
                             <tr>
                                 <td class="auto-style41"; style="border: 1px solid #EEEEEE">Mercados:</td>
                                 <td style="border: 1px solid #EEEEEE; background-color: #FFCC99;" class="auto-style43">
-                                    <asp:DropDownList ID="DropDownListMercados" DataSourceID="SqlDataSource2" AutoPostBack="True"
-                                        DataTextField="MERCADO" runat="server" AppendDataBoundItems="True" BackColor="#FFCC99" >
-                                    <asp:ListItem Value="0">R.E.M.O.T.O.</asp:ListItem>
-                                    </asp:DropDownList>
-                                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnPFIZER %>" SelectCommand="MercadosSeleccionados" SelectCommandType="StoredProcedure">
-                                        <SelectParameters>
-                                            <asp:SessionParameter Name="mercado" SessionField="SesionUsuarioMercado" Type="String" />
-                                        </SelectParameters>
-                                    </asp:SqlDataSource>
+                                    <asp:ListBox ID="LBMercados" runat="server" Width="115px" Height="50px"></asp:ListBox> 
                                 </td>
                             </tr>
                         </table> 

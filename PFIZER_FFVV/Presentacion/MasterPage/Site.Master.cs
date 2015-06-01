@@ -24,23 +24,35 @@ namespace PFIZER_FFVV.Presentacion.MasterPage
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["SesionUsuarioNomb"] != null & Session["SesionUsuarioClav"] != null)
+            if (Session["SesionUsuarioNomb"] != null & Session["SesionUsuarioClav"] != null && Session["SesionUsuarioRol"] !=null)
             {
                 LblUsuario.Text = Session["SesionUsuarioNomb"].ToString();
                 LblFicha.Text = Session["SesionUsuarioClav"].ToString();
-                //Label1.Text = Session["SesionUsuarioAno"].ToString();
                 
-                string[] words = Session["SesionUsuarioAno"].ToString().Split(',');
-                foreach (string s in words)
+                string[] anos = Session["SesionUsuarioAno"].ToString().Split(',');
+                LBAnos.Items.Clear();
+                foreach (string s in anos)
                 {
-                    ListBox1.Items.Add(s);
+                    LBAnos.Items.Add(s);
                 }
-                //Console.WriteLine(Session["SesionUsuarioAno"]);
-                //LblFicha.Visible = false;
-
-                //persona = (Usuario)Session["SesionUsuario"];
-                //string idPersona = persona.CodigoPersona;  
-
+                string[] periodos = Session["SesionUsuarioPeriodo"].ToString().Split(',');
+                LBPeriodos.Items.Clear();
+                foreach (string p in periodos)
+                {
+                    LBPeriodos.Items.Add(p);
+                }
+                string[] lineas = Session["SesionUsuarioLinea"].ToString().Split(',');
+                LBLineas.Items.Clear();
+                foreach (string l in lineas)
+                {
+                    LBLineas.Items.Add(l);
+                }
+                string[] mercados = Session["SesionUsuarioMercado"].ToString().Split(',');
+                LBMercados.Items.Clear();
+                foreach (string m in mercados)
+                {
+                    LBMercados.Items.Add(m);
+                }
             }
             else
             {
@@ -65,16 +77,7 @@ namespace PFIZER_FFVV.Presentacion.MasterPage
 
         protected void Menu1_MenuItemDataBound(object sender, MenuEventArgs e)
         {             
-                        
-            ////obtiene el item inicial del menu
-            //MenuItem item = e.Item;
 
-            //// Usar la propiedad "Selected" para selecionar la opcion del menu "Selecciones"
-            ////  item del menu cuando la pagina carga por primera vez
-            //if (item.Text == "Selecciones")
-            //{
-            //    item.Selected = true;
-            //}
         }
 
         protected void btMenu_Click(object sender, EventArgs e)

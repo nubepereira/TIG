@@ -3,31 +3,30 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
       <link rel="Shortcut Icon" href="../../Imagenes/FaviconRemoto.png"/>   
-
-
-
-<%-- Pruebas para el icono de carga en la pantalla
     
-    
-    1)<script type="text/javascript" src="../../Estilo/Scripts/jquery-2.1.0.min.js"></script>
-    <script type="text/javascript"> $(document).ready(function () {
-    window.onload = cerrar;
-    function cerrar() {
-        $("#carga").animate({ "opacity": "0" }, 3600, function () { $("#carga").css("display", "none"); });
-    }
-    $("#carga").click(function () { cerrar(); });
-});</script>--%>
-    
+<%--      <script type="text/javascript">
+          $(document).ready(function() {    
+              $('.button').click(function(){
 
-<%--   2) <script type="text/javascript">
-        window.onload = detectarCarga;
-        function detectarCarga() {
-            document.getElementById("imgLOAD").style.display = "#imgLOAD";
-        }
-    </script>--%>
+                  //Añadimos la imagen de carga en el contenedor
+                  $('#content').html('<div><img src="images/ajax-loader.gif"/></div>');
 
-    
+                  var page = $(this).attr('data');        
+                  var dataString = 'page='+page;
 
+
+                  $.ajax({
+                      type: "GET",
+                      url: "includes/Seleciones.aspx",
+                      data: dataString,
+                      success: function(data) {
+                          //Cargamos finalmente el contenido deseado
+                          $('#content').fadeIn(1000).html(data);
+                      }
+                  });
+              });              
+          });    
+</script>--%>
 </asp:Content>
 
 
@@ -40,10 +39,9 @@
        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>--%>
         <tr>
-            <td rowspan="4"> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
             <td><asp:Label ID="etiquetaLinea" runat="server" Text="Linea:" ForeColor="#ff9933" Visible="true" Enabled="true" style="font-weight: 700"></asp:Label></td>
-                <td></td>
-                <td><asp:DropDownList ID="ddlLineaVal" runat="server" DataTextField="NombreLinea" DataValueField="LineaPersona" Height="17px" Width="120" Visible="true" Enabled="true" OnSelectedIndexChanged="ddlLineaVal_SelectedIndexChanged" AutoPostBack="True">
+                <td></td><td rowspan="4" class="auto-style40"> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
+                <td><asp:DropDownList ID="ddlLineaVal" runat="server" DataTextField="NombreLinea" DataValueField="LineaPersona" Height="16px" Width="194px" Visible="true" Enabled="true" OnSelectedIndexChanged="ddlLineaVal_SelectedIndexChanged" AutoPostBack="True">
                     <asp:ListItem Text="Seleccione" Value="0" />
                     </asp:DropDownList>  
                 </td>
@@ -83,7 +81,7 @@
 
             <td>&nbsp;</td>
             <td>
-                <asp:ListBox ID="lbMercadosVal" runat="server" DataTextField="MERCADO" DataValueField="MERCADO" AppendDataBoundItems="true" Width="120" SelectionMode="Multiple" Visible="false" Enabled="false" OnSelectedIndexChanged="lbMercadosVal_SelectedIndexChanged">
+                <asp:ListBox ID="lbMercadosVal" runat="server" DataTextField="MERCADO" DataValueField="MERCADO" AppendDataBoundItems="true" Width="200" SelectionMode="Multiple" Visible="false" Enabled="false" OnSelectedIndexChanged="lbMercadosVal_SelectedIndexChanged">
                 <asp:ListItem Text="Seleccione" Value="0" />
                 </asp:ListBox>
             </td>   

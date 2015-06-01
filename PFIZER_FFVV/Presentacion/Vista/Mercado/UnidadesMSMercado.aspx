@@ -19,7 +19,7 @@
 
 <asp:Panel ID="Panel1" runat="server">
 
-    <fieldset style="width:373px; height:auto; margin-left:15%; left: 200px; position: relative; top: -170px;">
+    <fieldset style="width:373px; height:auto; margin-left:15%; left: 200px; position: relative; top: -330px;">
       <legend>Mercados/ Unid % MS</legend> 
             <table>
                 <tr>               

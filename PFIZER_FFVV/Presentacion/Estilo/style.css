@@ -102,10 +102,11 @@ font-size: small; left: 386px;
         .auto-style37{font-family: Tahoma; font-size: small;}
         .auto-style38{width: 341px;}
         .auto-style39{width: 63%;}
+        .auto-style40{width: 6px;}
     /*.auto-style41{border: 1px dotted #CCCCCC;
     padding: 1px 4px;
-    text-align: center;*/
-}
+    text-align: center;
+}*/
 
 /* layout */
 #content { margin: 10px auto; width: 974px; }
@@ -124,84 +125,6 @@ text-align: right; height: 21px;
 /* round blue login button */
 #loginbutton a { text-decoration: none; width: 24px; padding: 7px 12px; margin: 0 0 0 8px; height: 28px; background: #fff url(Imagenes/lb.gif) no-repeat; color: #000; }
 #loginbutton a:hover{ background: #fff url(Imagenes/lbhover.gif) no-repeat; color: #000;}
-
-/* main horizontal menu */
-/*#tablist{ padding: 3px 0;margin: 0 0 5px 0px;  FUNCIONAAA
-float: left;
-    width: 1007px;
-    height: 32px;
-    left: 155px;
-    position: relative;
-    top: 0px;
-}
-	#tablist li{ list-style: none; display: inline; margin: 0; }
-	#tablist li a{
-		text-decoration: none;
-		padding: 12px 22px;
-		margin-right: 2px;
-		background: #ff9400 url(~/Imagenes/corner.gif) no-repeat top right;
-		font-weight: bold;
-		color: #fff;
-	}
-	#tablist li a:hover{
-		background: #6495AB url(~/Imagenes/corner.gif) no-repeat top right;
-		color: #fff;
-	}
-	#tablist li a.current{
-		background: #fda835 url(~/Imagenes/corner.gif) no-repeat top right;
-		color: #fff;
-		padding: 6px 22px;
-	}
-	#tablist .key { text-decoration: underline; }*/
-
-    /*Segundo menu -- esta informacion no es necesaria en el codigo--
-#tablistb{ padding: 3px 0;margin: 0 0 5px 4px; 
-float: left;
-    width: 1085px;
-    height: 32px;
-}
-	#tablistb li{ list-style: none; display: inline; margin: 0; }
-	#tablistb li a{
-		text-decoration: none;
-		padding: 12px 22px;
-		margin-right: 2px;
-		background: #808080 url(Imagenes/corner.gif) no-repeat top right;
-		font-weight: bold;
-		color: #fff;
-	}
-	#tablistb li a:hover{
-		background: #6495AB url(Imagenes/corner.gif) no-repeat top right;
-		color: #fff;
-	}
-	#tablistb li a.current{
-		background: #9FC7D8 url(Imagenes/corner.gif) no-repeat top right;
-		color: #2F637A;
-		padding: 6px 22px;
-	}
-	#tablistb .key { text-decoration: underline; }
-*/
-   
-
-/* main menu topics */
-/*#topics {
-	clear: left;
-	float: left;
-	width: 621px;
-	background: #B0D0DC url(Imagenes/topicsbg.gif) repeat-x left bottom;
-	padding: 8px 5px;
-	margin: 0 0 5px 405px;
-	color: #fff;
-	height: 134px;
-    position: relative;
-    bottom: 0px;
-    right: 1px;
-    top: 0px;
-    left: -1px;
-    text-align: center;
-}
-	#topics li a { background-image: url(Imagenes/bullet.gif); background-repeat: no-repeat; background-position: center left;  padding: 0 0 0 12px; }*/
-
-
 
 /* left side */
 #left {

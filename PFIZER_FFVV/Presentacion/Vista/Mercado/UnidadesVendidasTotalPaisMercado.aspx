@@ -11,7 +11,7 @@
             </td>
         </tr>
     </table>
-    <fieldset style="width:373px; height:auto; margin-left:15%; left: 200px; position: relative; top: -170px;" >        
+    <fieldset style="width:373px; height:auto; margin-left:15%; left: 200px; position: relative; top: -330px;" >        
     <legend>Mercados/ Unid Vendidas Total Pais</legend> 
      <table>
       <tr>
@@ -45,7 +45,7 @@
             </SelectParameters>
           </asp:SqlDataSource>
         </td>
-          <td>
+          <td valign="top">
               <asp:GridView ID="GridView2" runat="server" DataKeyNames="MERCADO" AutoGenerateRows="False" 
                   DataSourceID="SqlDataSource3" HeaderText="Detalle Periodos" Width="275px" AutoGenerateColumns="False" 
                   AllowPaging="True" style="left: 0px; position: relative; top: 0px;  text-align: center;" 

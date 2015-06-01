@@ -11,7 +11,7 @@
             </td>
         </tr>
     </table>
-<fieldset style="width:760px; height:auto; margin-left:15%; left: 200px; position: relative; top: -190px;">
+<fieldset style="width:760px; height:auto; margin-left:15%; left: 200px; position: relative; top: -330px;">
 
       <legend>Trimestre/ Unid TrimXBrickMercado</legend> 
 

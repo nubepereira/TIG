@@ -19,6 +19,7 @@ using PFIZER_FFVV.AccesoDeDatos.Conexion.InterfazConexion;
 using PFIZER_FFVV.LogicaDeNegocios.Clases.LNUsuarios;
 using PFIZER_FFVV.Entidades.EUsuarios;
 using System.Windows.Forms;
+using PFIZER_FFVV.Presentacion.MasterPage;
 
 namespace PFIZER_FFVV.Presentacion.Vista.Producto
 {
@@ -27,21 +28,13 @@ namespace PFIZER_FFVV.Presentacion.Vista.Producto
        
         protected void Page_Load(object sender, EventArgs e)
         {
+            var miMaster = (Site)this.Master;
+            System.Web.UI.WebControls.Menu mimenu = (System.Web.UI.WebControls.Menu)miMaster.FindControl("Menu1");
+            mimenu.Items[2].Selected = true;
 
-            if (Session["SesionUsuarioAno"] != null && Session["SesionUsuarioPeriodo"] != null && Session["SesionUsuarioLinea"] != null && Session["SesionUsuarioMercado"] != null)
+            if (Session["SesionUsuarioAno"] == null && Session["SesionUsuarioPeriodo"] == null && Session["SesionUsuarioLinea"] == null && Session["SesionUsuarioMercado"] == null)
             {
-                //LblAno.Text = Session["SesionUsuarioAno"].ToString();
-                //LblPeriodo.Text = Session["SesionUsuarioPeriodo"].ToString();
-                //LblLinea.Text = Session["SesionUsuarioLinea"].ToString();
-                //LblMercado.Text = Session["SesionUsuarioMercado"].ToString();
-
-                //persona = (Usuario)Session["SesionUsuario"];
-                //string idPersona = persona.CodigoPersona;                
-
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar Datos en la Página actual para continuar!", "PRODUCTOS");
+                MessageBox.Show("Debe seleccionar Datos correctos para continuar!", "PRODUCTOS");
                 Response.Redirect("~/Presentacion/Vista/Seleccion/Seleciones.aspx");
             }
         }     

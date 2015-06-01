@@ -4,6 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net;
+using System.Net.Mail;
+using System.Configuration;
+using System.Windows.Forms;
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.text.html.simpleparser;
+using System.Data;
 
 namespace PFIZER_FFVV.Presentacion.MasterPage
 {
@@ -19,11 +28,27 @@ namespace PFIZER_FFVV.Presentacion.MasterPage
             {
                 LblUsuario.Text = Session["SesionUsuarioNomb"].ToString();
                 LblFicha.Text = Session["SesionUsuarioClav"].ToString();
-                //LblFicha.Visible = false;
 
-                //persona = (Usuario)Session["SesionUsuario"];
-                //string idPersona = persona.CodigoPersona;
-
+                string[] anos = Session["SesionUsuarioAno"].ToString().Split(',');
+                foreach (string s in anos)
+                {
+                    LBAnos.Items.Add(s);
+                }
+                string[] periodos = Session["SesionUsuarioPeriodo"].ToString().Split(',');
+                foreach (string p in periodos)
+                {
+                    LBPeriodos.Items.Add(p);
+                }
+                string[] lineas = Session["SesionUsuarioLinea"].ToString().Split(',');
+                foreach (string l in lineas)
+                {
+                    LBLineas.Items.Add(l);
+                }
+                string[] mercados = Session["SesionUsuarioMercado"].ToString().Split(',');
+                foreach (string m in mercados)
+                {
+                    LBMercados.Items.Add(m);
+                }
             }
             else
             {

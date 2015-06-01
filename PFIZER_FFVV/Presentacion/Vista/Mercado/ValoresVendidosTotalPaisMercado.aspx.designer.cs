@@ -10,7 +10,7 @@
 namespace PFIZER_FFVV.Presentacion.Vista.Mercado {
     
     
-    public partial class ValoresVendidosTotalPaisMercado1 {
+    public partial class ValoresVendidosTotalPaisMercado {
         
         /// <summary>
         /// Control Panel1.

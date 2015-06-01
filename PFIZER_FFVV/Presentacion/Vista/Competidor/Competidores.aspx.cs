@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using PFIZER_FFVV.Presentacion.MasterPage;
 
 namespace PFIZER_FFVV.Presentacion.Vista.Competidor
 {
@@ -12,18 +13,15 @@ namespace PFIZER_FFVV.Presentacion.Vista.Competidor
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["SesionUsuarioAno"] != null && Session["SesionUsuarioPeriodo"] != null && Session["SesionUsuarioLinea"] != null && Session["SesionUsuarioMercado"] != null)
-            {
-                //LblAno.Text = Session["SesionUsuarioAno"].ToString();
-                //LblPeriodo.Text = Session["SesionUsuarioPeriodo"].ToString();
-                //LblLinea.Text = Session["SesionUsuarioLinea"].ToString();
-                //LblMercado.Text = Session["SesionUsuarioMercado"].ToString();
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar Datos en la Página actual para continuar!", "COMPETIDORES");
-                Response.Redirect("~/Presentacion/Vista/Seleccion/Seleciones.aspx");
-            }
+                var miMaster = (Site)this.Master;
+                System.Web.UI.WebControls.Menu mimenu = (System.Web.UI.WebControls.Menu)miMaster.FindControl("Menu1");
+                mimenu.Items[5].Selected = true;
+
+                if (Session["SesionUsuarioAno"] == null && Session["SesionUsuarioPeriodo"] == null && Session["SesionUsuarioLinea"] == null && Session["SesionUsuarioMercado"] == null)
+                {
+                    MessageBox.Show("Debe seleccionar Datos correctos para continuar!", "COMPETIDORES");
+                    Response.Redirect("~/Presentacion/Vista/Seleccion/Seleciones.aspx");
+                }
         }
     }
 }
